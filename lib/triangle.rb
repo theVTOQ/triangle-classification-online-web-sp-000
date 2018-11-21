@@ -14,7 +14,7 @@ class Triangle
     uniques = sides.uniq
     num_of_uniques = uniques.size
     sorted_sides = sides.sort
-    
+
     #binding.pry
     if sorted_sides[0] + sorted_sides[1] <= sorted_sides[2] || sides.any? {|n| n <= 0}
       begin
@@ -31,10 +31,12 @@ class Triangle
     end
   end
 
-  class TriangleError < StandardError
-    def message
-      "Invalid dimensions."
-    end
+  
+end
+
+class TriangleError < StandardError
+  def message
+    "Invalid dimensions."
   end
 end
 puts Triangle.new(0,0,0).kind
