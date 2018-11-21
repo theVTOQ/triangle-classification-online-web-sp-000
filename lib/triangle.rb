@@ -8,6 +8,12 @@ class Triangle
     @side3 = side3
   end
 
+  class TriangleError < StandardError
+    def message
+      "Invalid dimensions."
+    end
+  end
+
   def kind
     #examples: 2, 3, 4
     sides = [@side1, @side2, @side3]
@@ -30,13 +36,6 @@ class Triangle
       return :scalene
     end
   end
-
-
 end
 
-class TriangleError < StandardError
-  def message
-    "Invalid dimensions."
-  end
-end
 puts Triangle.new(0,0,0).kind
