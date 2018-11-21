@@ -15,11 +15,7 @@ class Triangle
 
     #binding.pry
     if sorted_sides[0] + sorted_sides[1] <= sorted_sides[2] || sides.any? {|n| n <= 0}
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        error.message
-      end
+      raise TriangleError
     elsif num_of_uniques == 1
       return :equilateral
     elsif num_of_uniques == 2
