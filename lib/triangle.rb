@@ -1,6 +1,5 @@
 #require 'pry'
 class Triangle
-  # write code here
 
   def initialize(side1, side2, side3)
     @side1 = side1
@@ -9,7 +8,6 @@ class Triangle
   end
 
   def kind
-    #examples: 2, 3, 4
     sides = [@side1, @side2, @side3]
     uniques = sides.uniq
     num_of_uniques = uniques.size
@@ -38,4 +36,4 @@ class Triangle
   end
 end
 
-puts Triangle.new(0,0,0).kind
+#puts Triangle.new(0,0,0).kind
