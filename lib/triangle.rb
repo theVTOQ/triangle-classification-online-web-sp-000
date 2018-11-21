@@ -14,8 +14,7 @@ class Triangle
     uniques = sides.uniq
     num_of_uniques = uniques.size
     sorted_sides = sides.sort
-    #sum = sorted_sides.inject(0){|sum, x| sum + x}
-    # sum/3 == sorted_sides[0]
+    
     #binding.pry
     if sorted_sides[0] + sorted_sides[1] <= sorted_sides[2] || sides.any? {|n| n <= 0}
       begin
